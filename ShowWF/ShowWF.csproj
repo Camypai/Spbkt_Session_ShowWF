@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{6640D314-604C-4CC7-BFA7-5E7C4E9FD610}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>ShowWF</RootNamespace>
+        <AssemblyName>ShowWF</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Deployment" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Avg.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Avg.Designer.cs">
+          <DependentUpon>Avg.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Db.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Db.Designer.cs">
+          <DependentUpon>Db.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Main.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Main.Designer.cs">
+            <DependentUpon>Main.cs</DependentUpon>
+        </Compile>
+        <Compile Include="OneDimArray.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="OneDimArray.Designer.cs">
+          <DependentUpon>OneDimArray.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="QuadEquat.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="QuadEquat.Designer.cs">
+          <DependentUpon>QuadEquat.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Seasons.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Seasons.Designer.cs">
+          <DependentUpon>Seasons.cs</DependentUpon>
+        </Compile>
+        <Compile Include="TwoDimArray.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="TwoDimArray.Designer.cs">
+          <DependentUpon>TwoDimArray.cs</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Avg.resx">
+          <DependentUpon>Avg.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Db.resx">
+          <DependentUpon>Db.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Main.resx">
+          <DependentUpon>Main.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="OneDimArray.resx">
+          <DependentUpon>OneDimArray.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="QuadEquat.resx">
+          <DependentUpon>QuadEquat.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Seasons.resx">
+          <DependentUpon>Seasons.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="TwoDimArray.resx">
+          <DependentUpon>TwoDimArray.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="seasons\autumn.jpeg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="seasons\spring.jpeg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="seasons\summer.jpeg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="seasons\winter.jpeg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
